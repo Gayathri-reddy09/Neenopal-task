@@ -1,17 +1,16 @@
 import React from 'react';
-import Card from './Card';
+import { Routes, Route } from 'react-router-dom';
+import UserListPage from './UserListPage';
+import UserDetails from './UserDetails';
 import './App.css';
-import cardData from './cardData.json';
-import Update from './Update';
-const App = () => {
+
+function App() {
   return (
-    <div className="container">
-      {cardData.map(card => (
-        <Card key={card.id} {...card} />
-      ))}
-      <Update />
-    </div>
+    <Routes>
+      <Route path="/" element={<UserListPage />} />
+      <Route path="/user/:username" element={<UserDetails />} />
+    </Routes>
   );
-};
+}
 
 export default App;
