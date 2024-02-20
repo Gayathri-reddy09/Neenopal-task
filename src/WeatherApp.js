@@ -84,16 +84,16 @@ const WeatherApp = () => {
                 <table className="sub-table">
                   <tbody>
                     <tr>
-                      <td colSpan="2">{date}</td>
+                      <td colSpan="2" className='date'>{date}</td>
                     </tr>
                     <tr>
-                      <td colSpan="2">Temperature</td>
+                      <td colSpan="2" className='temp'>Temperature</td>
                     </tr>
-                    <tr>
+                    <tr className='col'>
                       <td>Min</td>
                       <td>Max</td>
                     </tr>
-                    <tr>
+                    <tr className='col-2'>
                       <td>{data.minTemp}</td>
                       <td>{data.maxTemp}</td>
                     </tr>
